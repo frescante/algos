@@ -3,6 +3,7 @@
 #include <vector>
 #include <string>
 
+
 using namespace std;
 
 /**
@@ -12,8 +13,16 @@ using namespace std;
 \param [in] data The data set that will be searched
 \returns location of key if found or -1 if not found
 */
-int linearSearch(auto data, auto key);//prototype
-
+int linearSearch(auto data, auto key)//prototype
+{
+  for ( int i=0; i< data.size(); i++)
+	{
+		if (key == data[i])
+		return i; //if found
+	}
+	
+	return -1; //if not found
+}
 
 int main()
 {
